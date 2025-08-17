@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uday Gatti • Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Uday Gatti – Data Analyst specializing in analytics, supply chain, and BI dashboards (Power BI, Tableau)." />
+  <meta property="og:title" content="Uday Gatti • Data Analyst Portfolio" />
+  <meta property="og:description" content="Projects, experience, and skills across analytics, supply chain, and BI." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-nku1qSgR0r2O6q6Hq1oG4D2J4t8h1qWqgHfVQ1iFQv3B1x3ozbY0wJmXz5e3G0m1k6Ew3Wf0fZ7QKc8I9Wb8wA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root { --bg:#0b1020; --card:#111731; --card2:#0f1530; --text:#e8eefc; --muted:#a7b0c5; --accent:#38bdf8; --chip:#1e293b; --border:#213055; }
+    html { scroll-behavior: smooth; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background: radial-gradient(1200px 600px at 80% -10%, #1a2b68 0, transparent 60%), radial-gradient(1000px 500px at 10% -20%, #0f2357 0, transparent 60%), var(--bg); }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ max-width:1100px; margin-inline:auto; padding:24px }
+    header.nav{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(11,16,32,.6); border-bottom:1px solid var(--border); z-index:50 }
+    .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:10px }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:700 }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#22d3ee,#38bdf8) }
+    .nav a{ color:var(--text); opacity:.9; padding:10px 12px; border-radius:10px }
+    .nav a:hover{ background:rgba(56,189,248,.1) }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:12px 16px; background:linear-gradient(135deg,#22d3ee,#38bdf8); color:#061022; border:none; border-radius:14px; font-weight:700; box-shadow:0 10px 22px rgba(56,189,248,.25); transition: transform .15s ease; }
+    .btn:hover{ transform: translateY(-1px) }
+    .hero{ display:grid; grid-template-columns: 1.2fr .8fr; gap:30px; padding-top:42px; padding-bottom:8px }
+    .hero h1{ font-size:clamp(32px,5vw,52px); line-height:1.05; margin:.2em 0 }
+    .tag{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:var(--muted); background:rgba(255,255,255,.02) }
+    .grid{ display:grid; gap:16px }
+    .cards{ display:grid; grid-template-columns:repeat(12,1fr); gap:18px }
+    .card{ grid-column: span 12; background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)); border:1px solid var(--border); border-radius:16px; padding:18px 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25) }
+    .card h3{ margin:0 0 6px 0; font-size:18px }
+    .subtle{ color:var(--muted); font-size:14px }
+    .kpis{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px }
+    .kpi{ background:var(--chip); color:#cbd5e1; border:1px solid #334155; padding:6px 10px; border-radius:999px; font-size:12px }
+    .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:18px }
+    section{ padding:14px 0 24px 0 }
+    .section-title{ font-size:22px; font-weight:800; margin:18px 0 10px 0 }
+    .skills{ display:flex; flex-wrap:wrap; gap:8px }
+    .chip{ background:var(--chip); border:1px solid #3a4b74; padding:8px 12px; border-radius:12px; color:#e2e8f0; font-size:13px }
+    .project-grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:18px }
+    .project{ grid-column: span 12; background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)); border:1px solid var(--border); border-radius:16px; padding:16px }
+    .project h4{ margin:0 0 6px 0 }
+    .project .meta{ color:var(--muted); font-size:13px }
+    .footer{ border-top:1px solid var(--border); color:var(--muted); font-size:14px; padding:18px 0 40px 0 }
+    .aside{ background:radial-gradient(120% 120% at 100% 0%, #13204b 0, transparent 70%), var(--card); border:1px solid var(--border); border-radius:16px; padding:16px }
+    .resume-actions{ display:flex; gap:10px; flex-wrap:wrap }
+    .avatar{ width:120px; height:120px; border-radius:50%; border:2px solid var(--border); background:linear-gradient(135deg,#1e293b,#334155); display:flex; align-items:center; justify-content:center; font-size:42px; font-weight:800 }
+    .sr-only{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+    @media (max-width: 920px){ .hero{ grid-template-columns:1fr; } }
+    @media (min-width: 720px){ .card.span-6{ grid-column: span 6; } .project.span-6{ grid-column: span 6; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Uday Gatti",
+    "jobTitle": "Data Analyst",
+    "email": "gattiuday@gmail.com",
+    "url": "https://yourusername.github.io/",
+    "address": {"@type":"PostalAddress","addressLocality":"North Bergen","addressRegion":"NJ","addressCountry":"US"},
+    "sameAs": ["https://in.linkedin.com/in/gattiuday"]
+  }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><span class="dot" aria-hidden="true"></span> Uday Gatti</div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div>
+        <span class="tag"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Data Analyst • Supply Chain • BI</span>
+        <h1>Hi, I'm <span style="color:var(--accent)">Uday</span> — I turn messy data into decisions.</h1>
+        <p class="subtle" style="max-width:68ch">Data Analyst with ~2 years of experience analyzing complex datasets and building data-driven insights. I optimize inventory and sales processes, build dashboards (Power BI, Tableau, Excel), and support leadership with clear metrics across supply chain and operations.</p>
+        <div class="resume-actions" style="margin:14px 0 10px">
+          <a class="btn" href="#contact"><i class="fa-regular fa-paper-plane"></i><span>Contact Me</span></a>
+          <a class="btn" style="background:#1ef1ff;color:#04101f" href="resume/Uday_Gatti_Resume.pdf" download>
+            <i class="fa-solid fa-file-arrow-down"></i> <span>Download Resume</span>
+          </a>
+          <a class="btn" style="background:#a5b4fc;color:#0b1020" href="https://in.linkedin.com/in/gattiuday" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
+          </a>
+        </div>
+        <div class="kpis">
+          <div class="kpi">9% ↑ inventory accuracy</div>
+          <div class="kpi">15% ↓ stockouts</div>
+          <div class="kpi">5+ automated dashboards</div>
+        </div>
+      </div>
+      <aside class="aside">
+        <div class="grid" style="gap:14px">
+          <div class="avatar" aria-hidden="true">UG</div>
+          <div>
+            <div class="subtle">North Bergen, NJ • Open to opportunities</div>
+            <div style="display:flex; gap:12px; margin-top:8px; flex-wrap:wrap">
+              <a href="mailto:gattiuday@gmail.com" class="chip"><i class="fa-regular fa-envelope"></i> gattiuday@gmail.com</a>
+              <a href="tel:+15515564585" class="chip"><i class="fa-solid fa-phone"></i> +1 (551) 556‑4585</a>
+              <a href="https://in.linkedin.com/in/gattiuday" target="_blank" rel="noopener" class="chip"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="skills">
+        <span class="chip">Python</span>
+        <span class="chip">R</span>
+        <span class="chip">SQL (MySQL, BigQuery)</span>
+        <span class="chip">NoSQL</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">Looker</span>
+        <span class="chip">QuickSight</span>
+        <span class="chip">Excel (VBA, Macros)</span>
+        <span class="chip">GCP</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Azure</span>
+        <span class="chip">CRM: Dynamics 365, Zoho, Salesforce, QuickBooks, HubSpot</span>
+        <span class="chip">Agile & Scrum</span>
+        <span class="chip">Data Modeling</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">ERP / Oracle BI</span>
+      </div>
+
+      <h3 class="section-title" style="margin-top:20px">Certifications</h3>
+      <div class="skills">
+        <span class="chip">Google Data Analytics (Coursera)</span>
+        <span class="chip">IBM Data Analyst (Coursera)</span>
+        <span class="chip">Microsoft: Power BI Data Analyst Associate</span>
+        <span class="chip">CompTIA Data+</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="cards">
+        <article class="card span-6">
+          <h3>Gran Trade Inc — Inventory & Sales Data Analyst</h3>
+          <div class="subtle">Carlstadt, NJ • Jun 2025 – Present</div>
+          <ul>
+            <li>Improved inventory accuracy by <strong>9%</strong> via root cause analysis and reconciliation in QuickBooks CRM.</li>
+            <li>Reduced stockouts by <strong>15%</strong> across 1,000+ SKUs by aligning reorder points to real-time demand.</li>
+            <li>Built <strong>5+</strong> automated dashboards (Excel & Power BI) to track inventory KPIs and sales velocity.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <h3>Inventory Management Analyst — Capstone, University of Bridgeport</h3>
+          <div class="subtle">Feb 2025</div>
+          <ul>
+            <li>Cut excess inventory by <strong>5%</strong> and improved turnover by <strong>13%</strong> across 500+ SKUs.</li>
+            <li>Built Excel dashboards integrated with QuickBooks; increased reporting accuracy by <strong>20%</strong>.</li>
+            <li>Enhanced demand forecast accuracy by <strong>5%</strong> using order history and warehouse cycles.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <h3>Smart Internz — Data Analyst</h3>
+          <div class="subtle">Chennai, India • Jan 2022 – Apr 2022</div>
+          <ul>
+            <li>Implemented ML for predictive maintenance; reduced breakdowns by <strong>25%</strong>.</li>
+            <li>Forecast failures with <strong>85%</strong> accuracy; optimized maintenance schedules.</li>
+            <li>Deployed dashboards raising equipment uptime by <strong>20%</strong>.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <h3>Cognibot — Data Analyst</h3>
+          <div class="subtle">Chennai, India • Jul 2021 – Dec 2021</div>
+          <ul>
+            <li>Improved data accuracy by <strong>25%</strong> via automated collection systems.</li>
+            <li>Increased operational efficiency by <strong>20%</strong> using real-time analytics.</li>
+            <li>Cut downtime by <strong>15%</strong> with modeling-driven failure prediction; built Power BI dashboards.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+        <article class="project span-6">
+          <h4>NCAA Women’s Basketball Ticket Sales Forecast</h4>
+          <p class="meta">XGBoost (96.89%) & Deep Neural Network (97.60%)</p>
+          <p>Built predictive models to forecast ticket sales and inform pricing & marketing strategies.</p>
+          <p class="subtle">Tech: Python, scikit-learn, TensorFlow, Pandas, Matplotlib</p>
+        </article>
+        <article class="project span-6">
+          <h4>Global Food Security Trends (2000–2022)</h4>
+          <p class="meta">Tableau Story + IMF/FAO/OECD/World Bank/WHO data</p>
+          <p>Integrated multi-source datasets to analyze drivers of food insecurity and provide policy insights.</p>
+          <p class="subtle">Tech: Tableau, SQL, Python</p>
+        </article>
+        <article class="project span-6">
+          <h4>Firm Bankruptcy Prediction</h4>
+          <p class="meta">SAS Enterprise Miner • DNN 97.60% • XGBoost 96.89%</p>
+          <p>Developed risk models for early warning signals enabling proactive portfolio management.</p>
+          <p class="subtle">Tech: SAS, Python, scikit-learn</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>University of Bridgeport — M.S. Analytics & Systems</h3>
+          <div class="subtle">Bridgeport, CT • May 2025</div>
+        </div>
+        <div class="card">
+          <h3>Sathyabama University — B.E. Computer Science & Engineering</h3>
+          <div class="subtle">Chennai, India • May 2023</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership">
+      <h2 class="section-title">Leadership & Publications</h2>
+      <div class="cards">
+        <div class="card span-6">
+          <h3>Leadership</h3>
+          <ul>
+            <li>Cofounder, ACM Student Chapter, Sathyabama University — led a team of 8.</li>
+            <li>Member, Delta Mu Delta International Business Honor Society (Theta Delta, 2025).</li>
+          </ul>
+        </div>
+        <div class="card span-6">
+          <h3>Publication</h3>
+          <ul>
+            <li>Mood‑Enhancing Music Recommendation System based on Audio Signals and Emotions (IEEE Xplore).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>Interested in collaborating or hiring? I’m available for Data Analyst roles (Analytics / Supply Chain / BI).</p>
+          <p><strong>Email:</strong> <a href="mailto:gattiuday@gmail.com">gattiuday@gmail.com</a><br/>
+             <strong>Phone:</strong> <a href="tel:+15515564585">+1 (551) 556‑4585</a><br/>
+             <strong>LinkedIn:</strong> <a href="https://in.linkedin.com/in/gattiuday" target="_blank" rel="noopener">in/gattiuday</a></p>
+        </div>
+        <form class="card" id="contactForm" onsubmit="sendEmail(event)">
+          <h3 class="sr-only">Quick Contact</h3>
+          <label>
+            <span class="sr-only">Your email</span>
+            <input required type="email" id="fromEmail" placeholder="Your email" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text);margin-bottom:8px" />
+          </label>
+          <label>
+            <span class="sr-only">Your message</span>
+            <textarea required id="message" rows="4" placeholder="Message" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text);margin-bottom:8px"></textarea>
+          </label>
+          <button class="btn" type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
+          <p class="subtle" id="formNote" style="margin-top:8px">This demo opens your email app. For a production form, connect Formspree/Netlify or a backend.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Uday Gatti • Built with HTML/CSS • Hosted on GitHub Pages</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function sendEmail(e){
+      e.preventDefault();
+      const email = document.getElementById('fromEmail').value;
+      const msg = encodeURIComponent(document.getElementById('message').value);
+      const subject = encodeURIComponent('Portfolio contact');
+      window.location.href = `mailto:gattiuday@gmail.com?subject=${subject}&body=From:%20${encodeURIComponent(email)}%0A%0A${msg}`;
+    }
+  </script>
+</body>
+</html>
